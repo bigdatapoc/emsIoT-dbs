@@ -1,2 +1,2 @@
-# emsIoT-dbs
-Employe Monitoring System(IoT) - DataBases Environment
+# pmsIoT-dbs
+People Monitoring System(IoT) - DataBases Environment
