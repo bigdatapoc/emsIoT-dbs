@@ -8,12 +8,6 @@ services:
       - ./redis.conf:/usr/local/etc/redis/redis.conf
     ports:
       - "6379"
-
-  eureka:
-    build: microservicepoc-eureka-server
-    ports:
-    - "8761:8761"
-
 # Cassandra clusters
   cassandra-1:
     hostname: cassandra-1
