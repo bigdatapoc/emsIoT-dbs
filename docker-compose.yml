@@ -10,6 +10,7 @@ services:
       - "6379"
 # Cassandra clusters
   cassandra-1:
+    hostname: 192.168.2.68
     image: cassandra:latest
     command: /bin/bash -c "sleep 1 && echo ' -- Pausing to let system catch up ... -->' && /docker-entrypoint.sh cassandra -f"
     expose:
