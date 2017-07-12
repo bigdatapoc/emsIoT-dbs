@@ -11,9 +11,7 @@ services:
 # Cassandra clusters
   cassandra:
     image: bitnami/cassandra:latest
-    volumes:
-      - ./cassandra.yaml:/bitnami
-    #   - ./data/cassandra-1:/var/lib/cassandra:rw
+
 # MongoDB Service:
   mongodb:
     image: 'bitnami/mongodb:latest'
