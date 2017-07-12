@@ -10,7 +10,6 @@ services:
       - "6379"
 # Cassandra clusters
   cassandra-1:
-    hostname: 192.168.2.68
     image: cassandra:latest
     command: /bin/bash -c "sleep 1 && echo ' -- Pausing to let system catch up ... -->' && /docker-entrypoint.sh cassandra -f"
     expose:
@@ -19,7 +18,8 @@ services:
       - 7199
       - 9042
       - 9160
-    # volumes: # uncomment if you desire mounts, also uncomment cluster.sh
+    volumes: # uncomment if you desire mounts, also uncomment cluster.sh
+      - ./cassandra.yaml:/etc/cassandra/cassandra.yaml
     #   - ./data/cassandra-1:/var/lib/cassandra:rw
 # MongoDB Service:
   mongodb:
